@@ -1,0 +1,173 @@
+body {
+    background-color: #fbfbfb00;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#video {
+    display: block;
+    margin: 0;
+    animation: video-animatie 1.2s 1;
+}
+
+@keyframes video-animatie {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+section {
+    height: 100vh;
+    margin: auto;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* figure img{
+    height: 100vh;
+} */
+
+div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.Active div {
+    display: none;
+
+}
+
+.Active div img:nth-of-type(2) {
+    transform: translate(20rem, 0);
+    transition: all 1s ease-in-out;
+}
+
+.Active div img:first-of-type{
+    transform: translate(20rem, 13rem);
+    transition: all 1s ease-in-out;
+}
+
+.Activediv img:last-of-type{
+    transform: translate(20rem, -13rem);
+    transition: all 1s ease-in-out;
+}
+
+div img {
+    /* position: absolute;
+    top: 45%;
+    left: 45%; */
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    /* animation: knop-animatie 1.2s 1; */
+}
+
+div img:nth-of-type(2) {
+    transform: translate(0, 0);
+    animation: knop-animatie2 1.2s 1;
+    transition: all 1s ease-in-out;
+}
+
+div img:first-of-type{
+    transform: translate(2rem, 0);
+    animation: knop-animatie1 1.2s 1;
+    transition: all 1s ease-in-out;
+}
+
+div img:last-of-type{
+    transform: translate(2rem, 0);
+    animation: knop-animatie3 1.2s 1;
+    transition: all 1s ease-in-out;
+}
+
+/* div img:first-of-type,
+div img:nth-of-type(3) {
+    margin-left: 3rem;
+} */
+
+@keyframes knop-animatie1 {
+    0% {
+        transform: translate(20rem, 13rem);
+        opacity: 0%;
+        margin: 0px
+    }
+
+    50% {
+        transform: translate(20rem, 13rem);
+        opacity: 0%;
+        margin: 0px
+    }
+
+    100% {
+        transform: translate(2rem, 0);
+        opacity: 100%;
+        margin: 0 50px
+    }
+}
+
+@keyframes knop-animatie2 {
+    0% {
+        transform: translate(20rem, 0);
+        opacity: 0%;
+        margin: 0px
+    }
+
+    50% {
+        transform: translate(20rem, 0);
+        opacity: 0%;
+        margin: 0px
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+        margin: 0 50px
+    }
+}
+
+@keyframes knop-animatie3 {
+    0% {
+        transform: translate(20rem, -13rem);
+        opacity: 0%;
+        margin: 0px
+    }
+
+    50% {
+        transform: translate(20rem, -13rem);
+        opacity: 0%;
+        margin: 0px
+    }
+
+    100% {
+        transform: translate(2rem, 0);
+        opacity: 100%;
+        margin: 0 50px
+    }
+}
+
+
+
+div img:hover {
+    transform: scale(1.2);
+}
