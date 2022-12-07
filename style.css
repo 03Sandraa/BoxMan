@@ -17,6 +17,18 @@ body {
     animation: video-animatie 1.2s 1;
 }
 
+video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -100;
+}
+section video:nth-of-type(2){
+    z-index: -200;
+}
+
 @keyframes video-animatie {
     0% {
         opacity: 0%;

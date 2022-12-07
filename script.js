@@ -13,61 +13,67 @@ buttonOnthulling.addEventListener('click', Onthulling);
 window.onload = function () {
     setTimeout(function () {
         gif.src = "images/gif/Main.gif";
+        video.src = "images/video/Intro.mp4";
 
-        setTimeout(function () {
-            gif.src = "images/gif/IdleState.gif";
+        video.addEventListener('ended',function(){
+            gif.src= "images/gif/IdleState.gif";
+            video.src = "images/video/IdleState.mp4";
             body.classList.remove("Active");
-        }, 19800);
+          }, false);
+        // setTimeout(function () {
+        //     gif.src = "images/gif/IdleState.gif";
+        //     body.classList.remove("Active");
+        // }, 19800);
     }, 5350);
 };
 
 function WegGaan() {
-    // video.src = "images/video/Animatie1.mp4";
+    video.src = "images/video/Animatie1.mp4";
     gif.src = "images/gif/Animatie1.gif";
     body.classList.add("Active");
 
-    setTimeout(function () {
-        gif.src = "images/gif/IdleState.gif";
-        body.classList.remove("Active");
-    }, 21000);
-
-    // document.querySelector('video').addEventListener('ended',function(){
-    //     video.src = "images/video/IdleState.mov";
-    //     gif.src= "images/gif/IdleState.gif";
+    // setTimeout(function () {
+    //     gif.src = "images/gif/IdleState.gif";
     //     body.classList.remove("Active");
-    //   }, false);
+    // }, 21000);
+
+    video.addEventListener('ended',function(){
+        gif.src= "images/gif/IdleState.gif";
+        video.src = "images/video/IdleState.mp4";
+        body.classList.remove("Active");
+      }, false);
 }
 
 function Dansen() {
-    // video.src = "images/video/Animatie2.mp4";
+    video.src = "images/video/Animatie2.mp4";
     gif.src = "images/gif/Animatie2.gif";
     body.classList.add("Active");
 
-    setTimeout(function () {
-        gif.src = "images/gif/IdleState.gif";
-        body.classList.remove("Active");
-    }, 9000);
-
-    // document.querySelector('video').addEventListener('ended',function(){
-    //     video.src = "images/video/IdleState.mov";
-    //     gif.src= "images/gif/IdleState.gif";
+    // setTimeout(function () {
+    //     gif.src = "images/gif/IdleState.gif";
     //     body.classList.remove("Active");
-    //   }, false);
+    // }, 9000);
+
+    document.querySelector('video').addEventListener('ended',function(){
+        gif.src= "images/gif/IdleState.gif";
+        video.src = "images/video/IdleState.mp4";
+        body.classList.remove("Active");
+      }, false);
 }
 
 function Onthulling() {
-    // video.src = "images/video/Animatie3.mov";
+    video.src = "images/video/Animatie3.mp4";
     gif.src = "images/gif/Animatie3.gif";
     body.classList.add("Active");
 
-    setTimeout(function () {
-        gif.src = "images/gif/IdleState.gif";
-        body.classList.remove("Active");
-    }, 8000);
-
-    // document.querySelector('video').addEventListener('ended',function(){
-    //     video.src = "images/video/IdleState.mov";
-    //     gif.src= "images/gif/IdleState.gif";
+    // setTimeout(function () {
+    //     gif.src = "images/gif/IdleState.gif";
     //     body.classList.remove("Active");
-    //   }, false);
+    // }, 8000);
+
+    document.querySelector('video').addEventListener('ended',function(){
+        gif.src= "images/gif/IdleState.gif";
+        video.src = "images/video/IdleState.mp4";
+        body.classList.remove("Active");
+      }, false);
 }
