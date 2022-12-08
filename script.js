@@ -60,7 +60,7 @@ function Dansen() {
         gif.src = "images/gif/IdleState.gif";
     video.src = "images/video/IdleState.mp4";
         body.classList.remove("Active");
-    }, 9000);
+    }, 11000);
 
     // document.querySelector('video').addEventListener('ended', function () {
     //     gif.src = "images/gif/IdleState.gif";
